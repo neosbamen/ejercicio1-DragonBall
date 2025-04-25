@@ -16,6 +16,7 @@ public class Main {
 
         String location="https://pokeapi.co/api/v2/pokemon/ditto";
 
+        System.out.println("Hola mundo");
         try {
 
             URL url = new URL(location);
@@ -29,6 +30,8 @@ public class Main {
                 String line;
                 StringBuilder stringBuilder =new StringBuilder();
                 BufferedReader reader=new BufferedReader(new InputStreamReader(connection.getInputStream()));
+
+                System.out.println("Hola mundo");
 
                 while ((line=reader.readLine())!=null){
                     stringBuilder.append(line);
@@ -47,15 +50,9 @@ public class Main {
                 }
             }
 
-
-
         }catch (Exception exception){
             System.out.println(exception.getMessage());
         }
-
-
-
-
 
     }
 }
